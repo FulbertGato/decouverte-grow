@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\MessageGoogle;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class GestionnaireContoller extends Controller
 {
@@ -54,9 +56,13 @@ class GestionnaireContoller extends Controller
         $gestionnaire = new User();
         $gestionnaire->name = $request->name;
         $gestionnaire->email = $request->email;
-        $gestionnaire->password = bcrypt('password');
+        $gestionnaire->password = bcrypt('123456789');
         $gestionnaire->save();
-        //redirect
+        $data = array(
+            'message' => 'Votre compte a bien été créé ! Vous pouvez désormais vous connecter.
+            <br>Votre email est : '.$gestionnaire->email.' et votre mot de passe est : 123456789',
+        );
+       // Mail::to($gestionnaire)->bcc("fulbert@growstrategyzer.com")->queue(new MessageGoogle($data));
         return redirect()->route('admin.list')->with('success', 'Le gestionnaire a été ajouté avec succès');
     }
 

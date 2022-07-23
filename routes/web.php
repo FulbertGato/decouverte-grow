@@ -6,6 +6,7 @@ use App\Http\Controllers\FrontController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\PodcastController;
 use App\Http\Controllers\GestionnaireContoller;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,11 +23,6 @@ Route::get('/', [FrontController::class, 'home'])->name('home');
 Route::get('/video/{video}', [FrontController::class, 'video'])->name('video.play');
 Route::get('/video', [FrontController::class, 'videoS'])->name('video');
 Route::get('/podcast', [FrontController::class, 'podcast'])->name('podcast.play');
-
-
-Route::get('/dashboard', function () {
-    return view('pages.dashboard');
-})->middleware('auth');
 //podcastController list index method
 Route::get('/podcasts', [PodcastController::class, 'index'])->name('podcasts.list')->middleware('auth');
 //podcastController create method
@@ -62,4 +58,6 @@ Route::post('/gestionnaires', [GestionnaireContoller::class, 'store'])->name('ad
 //destroy method
 Route::get('/gestionnaires/delete/{gestionnaire}', [GestionnaireContoller::class, 'destroy'])->name('admin.delete')->middleware('auth');
 
+//logout get
+Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 require __DIR__.'/auth.php';

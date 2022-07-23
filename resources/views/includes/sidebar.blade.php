@@ -44,7 +44,7 @@
                 </a>
                 <div class="submenu">
                     <a href="{{route('admin.list')}}">Gerer les gestionnaires</a>
-                    <a href="{{route('podcasts.create')}}">Ajouter un gestionnaire</a>
+                    <a href="{{route('admin.create')}}">Ajouter un gestionnaire</a>
                 </div>
             </li>
         </ul>
