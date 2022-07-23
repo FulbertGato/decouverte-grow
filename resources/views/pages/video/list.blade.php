@@ -2,11 +2,10 @@
 @section('content')
 <div class="content-header">
     <div>
-        <h2 class="content-title card-title">Vidéos listes</h2>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <h2 class="content-title card-title">Liste vidéos témoignage</h2>
     </div>
     <div>
-        <a href="{{route('videos.create')}}" class="btn btn-primary btn-sm rounded">Create new</a>
+        <a href="{{route('videos.create')}}" class="btn btn-primary btn-sm rounded"><i class="icon material-icons md-add"></i> AJOUTER UNE NOUVELLE VIDEO</a>
     </div>
 </div>
 <div class="card mb-4">
@@ -31,17 +30,15 @@
                   </video>
                    {{-- <img src="{{asset($video->image)}}" alt="Product"> </a> --}}
                 <div class="info-wrap">
-                    <a href="#" class="title text-truncate">{{$video->title}}</a>
-                    <div class="price mb-2">{{$video->author}}</div> <!-- price.// -->
+                    <a href="#" class="title text-truncate">Titre: {{$video->title}}</a>
+                    <div class="price mb-2">Auteur : {{$video->author}}</div> <!-- price.// -->
                     <a href="{{url('/videos/edit/'.$video->id)}}" class="btn btn-sm font-sm rounded btn-warning">
                         <i class="material-icons md-edit"></i> Modifier
                     </a>
                     <a href="{{url('/videos/delete/'.$video->id)}}" class="btn btn-sm font-sm btn-danger rounded">
-                        <i class="material-icons md-delete_forever"></i> Supp
+                        <i class="material-icons md-delete_forever"></i> Supprimer
                     </a>
-                    <a href="#" class="btn btn-sm font-sm btn-success rounded">
-                        <i class="material-icons md-settings"></i> Voirs
-                    </a>
+
                 </div>
             </div> <!-- card-product  end// -->
         </div> <!-- col.// -->
@@ -50,16 +47,5 @@
         </div> <!-- row.// -->
     </div> <!-- card-body end// -->
 </div> <!-- card end// -->
-<div class="pagination-area mt-30 mb-50">
-    <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-start">
-            <li class="page-item active"><a class="page-link" href="#">01</a></li>
-            <li class="page-item"><a class="page-link" href="#">02</a></li>
-            <li class="page-item"><a class="page-link" href="#">03</a></li>
-            <li class="page-item"><a class="page-link dot" href="#">...</a></li>
-            <li class="page-item"><a class="page-link" href="#">16</a></li>
-            <li class="page-item"><a class="page-link" href="#"><i class="material-icons md-chevron_right"></i></a></li>
-        </ul>
-    </nav>
-</div>
+
 @endsection

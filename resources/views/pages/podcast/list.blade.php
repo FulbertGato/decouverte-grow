@@ -3,10 +3,9 @@
 <div class="content-header">
     <div>
         <h2 class="content-title card-title">Podcasts listes</h2>
-        <p>Lorem ipsum dolor sit amet.</p>
     </div>
     <div>
-        <a href="{{route('podcasts.create')}}" class="btn btn-primary btn-sm rounded">Ajouter un podcast</a>
+        <a href="{{route('podcasts.create')}}" class="btn btn-primary btn-sm rounded"><i class="icon material-icons md-add"></i>AJOUTER UN NOUVEAU PODCAST</a>
     </div>
 </div>
 <div class="card mb-4">
@@ -37,18 +36,7 @@
         </div> <!-- row.// -->
     </div> <!-- card-body end// -->
 </div> <!-- card end// -->
-<div class="pagination-area mt-30 mb-50">
-    <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-start">
-            <li class="page-item active"><a class="page-link" href="#">01</a></li>
-            <li class="page-item"><a class="page-link" href="#">02</a></li>
-            <li class="page-item"><a class="page-link" href="#">03</a></li>
-            <li class="page-item"><a class="page-link dot" href="#">...</a></li>
-            <li class="page-item"><a class="page-link" href="#">16</a></li>
-            <li class="page-item"><a class="page-link" href="#"><i class="material-icons md-chevron_right"></i></a></li>
-        </ul>
-    </nav>
-</div>
+
 <!-- get audio and play where on click -->
 <script>
     // Get the element, add a click listener...

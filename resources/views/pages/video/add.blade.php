@@ -12,13 +12,13 @@
             </ul>
         </div>
         @endif
+        <div>
+            <a href="{{route('videos.list')}}" class="btn btn-info btn-sm rounded"><i class="icon material-icons md-add"></i>Listes</a>
+        </div>
         <div class="col-9">
             <div class="content-header">
-                <h2 class="content-title">Ajouter une vidéo</h2>
-                <div>
-                    <button class="btn btn-light rounded font-sm mr-5 text-body hover-up">Brouillon</button>
-                    <button class="btn btn-md rounded font-sm hover-up">Publier</button>
-                </div>
+                <h2 class="content-title">AJOUTER UNE VIDEO</h2>
+
             </div>
         </div>
         <div class="col-lg-6">
@@ -38,13 +38,16 @@
                         <label class="form-label">Description</label>
                         <textarea placeholder="Type here" class="form-control" rows="4" name="description"></textarea>
                     </div>
+                    <div class="mb-4">
+                        <button class="btn btn-md rounded font-sm hover-up">AJOUTER UNE VIDEO</button>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-lg-3">
             <div class="card mb-4">
                 <div class="card-header">
-                    <h4>Cover photo</h4>
+                    <h4>Photo couverture</h4>
                 </div>
                 <div class="card-body">
                     <div class="input-upload">

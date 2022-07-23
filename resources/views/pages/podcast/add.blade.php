@@ -14,14 +14,14 @@
     @endif
 
     <div class="row">
+        <div>
+            <a href="{{route('podcasts.list')}}" class="btn btn-info btn-sm rounded"><i class="icon material-icons md-add"></i>Listes</a>
+        </div>
 
-            <div class="col-9">
+            <div class="col-9 mt-3">
                 <div class="content-header">
                     <h2 class="content-title">Ajouter un podcast</h2>
-                    <div>
-                        <button class="btn btn-light rounded font-sm mr-5 text-body hover-up">Brouillon</button>
-                        <button type="submit" class="btn btn-md rounded font-sm hover-up">Publier</button>
-                    </div>
+
                 </div>
             </div>
             <div class="col-lg-6">
@@ -41,13 +41,16 @@
                             <label class="form-label">Description</label>
                             <textarea name="description" class="form-control" rows="4"></textarea>
                         </div>
+                        <div class="mb-4" >
+                            <button type="submit" class="btn btn-md rounded font-sm hover-up"><i class="icon material-icons md-add"></i>AJOUTER LE PODCAST</button>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="card mb-4">
                     <div class="card-header">
-                        <h4>Cover photo</h4>
+                        <h4>Photo de couverture</h4>
                     </div>
                     <div class="card-body">
                         <div class="input-upload">
@@ -59,7 +62,7 @@
 
                 <div class="card mb-4">
                     <div class="card-header">
-                        <h4>Audio</h4>
+                        <h4>Podcast </h4>
                     </div>
                     <div class="card-body">
                         <div class="input-upload">

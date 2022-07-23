@@ -17,7 +17,7 @@
     <link href="{{asset('assets/css/main.css')}}" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
+<body class="dark">
     <main>
         <section class="content-main mt-80 mb-80">
             <div class="card mx-auto card-login">

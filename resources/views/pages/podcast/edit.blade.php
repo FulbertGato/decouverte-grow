@@ -17,11 +17,11 @@
 
             <div class="col-9" id="liste-audio-container">
                 <div class="content-header">
-                    <h2 class="content-title">Ajouter un podcast</h2>
+                    <h2 class="content-title">MODIFIER LE PODCAST</h2>
                     <div>
 
-                        <button type="button" src="{{asset($podcast->audio)}}" class="audio btn btn-light rounded font-sm mr-5 text-body hover-up">Ecouter</button>
-                        <button type="submit" class="btn btn-md rounded font-sm hover-up">Publier</button>
+                        <button type="button" src="{{asset($podcast->audio)}}" class="audio btn btn-light rounded font-sm mr-5 text-body hover-up"><i class="icon material-icons md-video"></i>Ecouter</button>
+
                     </div>
                 </div>
             </div>
@@ -43,13 +43,16 @@
                             <label class="form-label">Description</label>
                             <textarea name="description" class="form-control" rows="4">{{$podcast->description}}</textarea>
                         </div>
+                        <div>
+                            <button type="submit" class="btn btn-md rounded font-sm hover-up">MODIFER LE PODCAST</button>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="card mb-4">
                     <div class="card-header">
-                        <h4>Cover photo</h4>
+                        <h4>Photo couverture</h4>
                     </div>
                     <div class="card-body">
                         <div class="input-upload">
